@@ -10,7 +10,7 @@ public class ConsoleMenu : RhombusArrClass
         Console.WriteLine("2. Create an array of rhombuses randomly.");
     }
     
-    public static void SecondMenu()
+    public static void SecondMenuInterface()
     {
         Console.WriteLine("Enter your choice: ");
         Console.WriteLine("1. Print the array of rhombuses.");
@@ -31,7 +31,9 @@ public class ConsoleMenu : RhombusArrClass
                 Console.WriteLine("Enter the perimeter of the rhombus you want to remove: ");
                 break;
             case "Call":
-                RhombusArrClass.RemoveRhombusByPerimeter(ref RhombusArrClass.RhombusArr, ref RhombusArrClass.RhombusArrLength, Console.ReadLine());
+                var perimeter = Console.ReadLine();
+                if (perimeter == null) { Console.WriteLine("You have not entered the perimeter."); break; }
+                RhombusArrClass.RemoveRhombusByPerimeter(ref RhombusArrClass.RhombusArr, ref RhombusArrClass.RhombusArrLength, perimeter);
                 break;
             case "NoRhombusError":
                 Console.WriteLine("There is no rhombus with such perimeter.");

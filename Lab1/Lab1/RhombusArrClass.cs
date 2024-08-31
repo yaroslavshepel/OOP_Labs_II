@@ -94,23 +94,23 @@ public class RhombusArrClass
 
     public static void RemoveRhombusByPerimeter(ref RhombusClass[] rhombus, ref int oldRhombusArrLength, string perimeter)
     {
-
-        for (int i = 0; i < oldRhombusArrLength; i++)
+        var ifRhombusExists = false;
+        for (var i = 0; i < oldRhombusArrLength; i++)
         {
             if (rhombus[i].GetPerimeter().ToString() == perimeter)
             {
-                for (int j = i; j < oldRhombusArrLength - 1; j++)
+                ifRhombusExists = true;
+                for (var j = i; j < oldRhombusArrLength - 1; j++)
                 {
                     rhombus[j] = rhombus[j + 1];
                 }
                 oldRhombusArrLength--;
                 Array.Resize(ref rhombus, oldRhombusArrLength);
             }
-            else
-            {
-                ConsoleMenu.PerimeterToRemove("NoRhombusError");
-                break;
-            }
+        }
+        if (!ifRhombusExists)
+        {
+            ConsoleMenu.PerimeterToRemove("NoRhombusError");
         }
     }
     

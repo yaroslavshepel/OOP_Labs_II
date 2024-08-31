@@ -8,19 +8,24 @@ public class Program : RhombusArrClass
         while (isStopped)
         {
             ConsoleMenu.FirstMenu();
-            
-            var choice = Convert.ToInt32(Console.ReadLine());
+
+            var choice = 0;//Convert.ToInt32(Console.ReadLine());
+            try
+            { choice = Convert.ToInt32(Console.ReadLine()); }
+            catch (Exception e) { Console.WriteLine("This is not a number."); ConsoleMenu.PrintLongThing(); continue; }
             ConsoleMenu.PrintLongThing();
             bool SecondMenu()
             {
                 var isStopped2 = true;
                 while (isStopped2)
                 {
-                    ConsoleMenu.SecondMenu();
+                    ConsoleMenu.SecondMenuInterface();
                     ConsoleMenu.PrintLongThing();
-            
-                    var secondChoice = Convert.ToInt32(Console.ReadLine());
-            
+                    var secondChoice = 0;
+                    try
+                    { secondChoice = Convert.ToInt32(Console.ReadLine()); }
+                    catch (Exception e) { Console.WriteLine("This is not a number."); ConsoleMenu.PrintLongThing(); continue; }
+                    
                     switch (secondChoice)
                     {
                         case 1:
@@ -49,7 +54,6 @@ public class Program : RhombusArrClass
                 }
                 return isStopped;
             }
-            
             switch (choice)
             {
                 case 1:
