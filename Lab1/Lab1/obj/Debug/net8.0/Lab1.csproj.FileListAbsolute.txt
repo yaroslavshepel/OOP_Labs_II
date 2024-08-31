@@ -13,3 +13,18 @@ C:\Users\Yaroslav\Documents\GitHub\OOP_Labs_II\Lab1\Lab1\obj\Debug\net8.0\refint
 C:\Users\Yaroslav\Documents\GitHub\OOP_Labs_II\Lab1\Lab1\obj\Debug\net8.0\Lab1.pdb
 C:\Users\Yaroslav\Documents\GitHub\OOP_Labs_II\Lab1\Lab1\obj\Debug\net8.0\Lab1.genruntimeconfig.cache
 C:\Users\Yaroslav\Documents\GitHub\OOP_Labs_II\Lab1\Lab1\obj\Debug\net8.0\ref\Lab1.dll
+C:\Users\Juliya Shepel\Documents\GitHub\OOP_Labs_II\Lab1\Lab1\bin\Debug\net8.0\Lab1.exe
+C:\Users\Juliya Shepel\Documents\GitHub\OOP_Labs_II\Lab1\Lab1\bin\Debug\net8.0\Lab1.deps.json
+C:\Users\Juliya Shepel\Documents\GitHub\OOP_Labs_II\Lab1\Lab1\bin\Debug\net8.0\Lab1.runtimeconfig.json
+C:\Users\Juliya Shepel\Documents\GitHub\OOP_Labs_II\Lab1\Lab1\bin\Debug\net8.0\Lab1.dll
+C:\Users\Juliya Shepel\Documents\GitHub\OOP_Labs_II\Lab1\Lab1\bin\Debug\net8.0\Lab1.pdb
+C:\Users\Juliya Shepel\Documents\GitHub\OOP_Labs_II\Lab1\Lab1\obj\Debug\net8.0\Lab1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Juliya Shepel\Documents\GitHub\OOP_Labs_II\Lab1\Lab1\obj\Debug\net8.0\Lab1.AssemblyInfoInputs.cache
+C:\Users\Juliya Shepel\Documents\GitHub\OOP_Labs_II\Lab1\Lab1\obj\Debug\net8.0\Lab1.AssemblyInfo.cs
+C:\Users\Juliya Shepel\Documents\GitHub\OOP_Labs_II\Lab1\Lab1\obj\Debug\net8.0\Lab1.csproj.CoreCompileInputs.cache
+C:\Users\Juliya Shepel\Documents\GitHub\OOP_Labs_II\Lab1\Lab1\obj\Debug\net8.0\Lab1.sourcelink.json
+C:\Users\Juliya Shepel\Documents\GitHub\OOP_Labs_II\Lab1\Lab1\obj\Debug\net8.0\Lab1.dll
+C:\Users\Juliya Shepel\Documents\GitHub\OOP_Labs_II\Lab1\Lab1\obj\Debug\net8.0\refint\Lab1.dll
+C:\Users\Juliya Shepel\Documents\GitHub\OOP_Labs_II\Lab1\Lab1\obj\Debug\net8.0\Lab1.pdb
+C:\Users\Juliya Shepel\Documents\GitHub\OOP_Labs_II\Lab1\Lab1\obj\Debug\net8.0\Lab1.genruntimeconfig.cache
+C:\Users\Juliya Shepel\Documents\GitHub\OOP_Labs_II\Lab1\Lab1\obj\Debug\net8.0\ref\Lab1.dll

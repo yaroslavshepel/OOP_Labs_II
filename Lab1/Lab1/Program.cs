@@ -1,13 +1,50 @@
 ﻿using System;
 using Lab1.Classes;
 
+void rhombusArrCr()
+{
+    Rhombus[] rhombusArr = new Rhombus[1];
+    for (int i = 0; i < rhombusArr.Length; i++)
+    {
+
+        try
+        {
+            Console.WriteLine($"Enter the coordinates of the rhombus {i + 1}: ");
+            double x1 = Convert.ToDouble(Console.ReadLine());
+            double y1 = Convert.ToDouble(Console.ReadLine());
+            double x2 = Convert.ToDouble(Console.ReadLine());
+            double y2 = Convert.ToDouble(Console.ReadLine());
+            double x3 = Convert.ToDouble(Console.ReadLine());
+            double y3 = Convert.ToDouble(Console.ReadLine());
+            double x4 = Convert.ToDouble(Console.ReadLine());
+            double y4 = Convert.ToDouble(Console.ReadLine());
+
+            rhombusArr[i] = new Rhombus(x1, y1, x2, y2, x3, y3, x4, y4);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            i--;
+        }
+    }
+}
+//Rhombus rhombusArr = new Rhombus[1];
+//void 
+
+void AddRhombus(ref Rhombus[] array, Rhombus newRhombus)
+{
+    Array.Resize(ref array, array.Length + 1);
+    array[array.Length - 1] = newRhombus;
+}
+
 namespace Lab1
 {
+
     public class Program
     {
         public static void Main()
         {
-            try
+            /*try
             {
 
             }
@@ -15,10 +52,10 @@ namespace Lab1
             {
                 Console.WriteLine(e);
                 throw;
-            }
+            }*/
             
-            Rhombus[] rhombusArr = new Rhombus[7];
-            for (int i = 0; i < rhombusArr.Length; i++)
+            //Rhombus[] rhombusArr = new Rhombus[1];
+            /*for (int i = 0; i < rhombusArr.Length; i++)
             {
 
                 try
@@ -42,8 +79,8 @@ namespace Lab1
                 }
                 
                 
-            }
-
+            }*/
+/*
             // Demonstrate adding a new Rhombus
             Console.WriteLine("Adding a new Rhombus:");
             AddRhombus(ref rhombusArr, new Rhombus(1, 1, 2, 2, 3, 3, 4, 4));
@@ -64,10 +101,10 @@ namespace Lab1
             else
             {
                 Console.WriteLine("No Rhombus found with the specified criteria.");
-            }
+            }*/
         }
 
-        public static void AddRhombus(ref Rhombus[] array, Rhombus newRhombus)
+        /*public static void AddRhombus(ref Rhombus[] array, Rhombus newRhombus)
         {
             Array.Resize(ref array, array.Length + 1);
             array[array.Length - 1] = newRhombus;
@@ -101,7 +138,7 @@ namespace Lab1
             {
                 Console.WriteLine(rhombus.Print());
             }
-        }
+        }*/
     }
 }
 
