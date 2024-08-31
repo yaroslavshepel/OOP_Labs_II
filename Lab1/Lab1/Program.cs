@@ -1,16 +1,25 @@
-﻿using System;
-using Lab1.Classes;
-int rhombusArrLenght = 7;
-Rhombus[] rhombusArr = new Rhombus[7];
-Random Random = new Random();
+﻿using Lab1.Classes;
+var rhombusArrLength = 7;
+Rhombus[] rhombusArr = new Rhombus[rhombusArrLength];
+Random random = new Random();
 
-Rhombus CreateRhombusObj()
+Rhombus RhombusToArr(double x1, double y1, double x2, double y2, double x3, double y3, double x4, double y4)
 {
-    Rhombus rhombusTemp = new Rhombus();
+    var rhombusPerimeter = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
+    //String.Format("{0:0.00}", rhombusPerimeter);
+    string displayString = rhombusPerimeter.ToString("0.00");
+    displayString = displayString.Replace(",", ".");
+    var rhombusTemp = new Rhombus(x1, y1, x2, y2, x3, y3, x4, y4, displayString);
+    return rhombusTemp;
+}
+
+Rhombus RhombusInput()
+{
     Console.WriteLine("Enter the coordinates of the rhombus: ");
-    double x1 = 0, y1 = 0, x2 = 0, y2 = 0, x3 = 0, y3 = 0, x4 = 0, y4 = 0, x = 0, y = 0;
+    double x1 = 0, y1 = 0, x2 = 0, y2 = 0, x3 = 0, y3 = 0, x4 = 0, y4 = 0;
     for (int j = 0; j < 4; j++)
     {
+        double x = 0, y = 0;
         try
         {
             x = Convert.ToDouble(Console.ReadLine());
@@ -19,7 +28,6 @@ Rhombus CreateRhombusObj()
         catch (Exception e)
         {
             Console.WriteLine(e);
-            throw;
         }
         //!double x = Convert.ToDouble(Console.ReadLine());
         //!double y = Convert.ToDouble(Console.ReadLine());
@@ -31,18 +39,17 @@ Rhombus CreateRhombusObj()
             case 3: x4 = x; y4 = y; break;
         }
     }
-    rhombusTemp = new Rhombus(x1, y1, x2, y2, x3, y3, x4, y4);
+    Rhombus rhombusTemp = RhombusToArr( x1, y1, x2, y2, x3, y3, x4, y4);
     return rhombusTemp;
 }
 
-Rhombus RandRhombusArrObj()
+Rhombus RandomRhombusInput()
 {
-    Rhombus rhombusTemp = new Rhombus();
-    double x1 = 0, y1 = 0, x2 = 0, y2 = 0, x3 = 0, y3 = 0, x4 = 0, y4 = 0, x = 0, y = 0;
-    for (int j = 0; j < 4; j++)
+    double x1 = 0, y1 = 0, x2 = 0, y2 = 0, x3 = 0, y3 = 0, x4 = 0, y4 = 0;
+    for (var j = 0; j < 4; j++)
     {
-        x = Random.Next(1, 10);
-        y = Random.Next(1, 10);
+       double x = random.Next(-100, 100);
+       double y = random.Next(-100, 100);
         switch (j)
         {
             case 0: x1 = x; y1 = y; break;
@@ -51,19 +58,18 @@ Rhombus RandRhombusArrObj()
             case 3: x4 = x; y4 = y; break;
         }
     }
-    rhombusTemp = new Rhombus(x1, y1, x2, y2, x3, y3, x4, y4);
+    Rhombus rhombusTemp = RhombusToArr( x1, y1, x2, y2, x3, y3, x4, y4);
     return rhombusTemp;
-    //rhombusArr[i] = new Rhombus(x1, y1, x2, y2, x3, y3, x4, y4);
 }
 
 void RhombusArrCr()
 {
-    for (int i = 0; i < rhombusArr.Length; i++)
+    for (int i = 0; i < rhombusArrLength; i++)
     {
         try
         {
-            //!rhombusArr[i] = CreateRhombusObj();
-            rhombusArr[i] = RandRhombusArrObj();
+            //!rhombusArr[i] = RhombusInput();
+            rhombusArr[i] = RandomRhombusInput();
         }
         catch (Exception e)
         {
@@ -73,27 +79,39 @@ void RhombusArrCr()
     }
 }
 
-
-
-
-/*void AddRhombus(ref Rhombus[] array, Rhombus newRhombus)
+void AddRhombus(ref Rhombus[] rhombus, ref int oldRhombusArrLength)
 {
-    
-    Array.Resize(ref array, array.Length + 1);
-    array[array.Length - 1] = newRhombus;
-}*/
+    oldRhombusArrLength++;
+    Array.Resize(ref rhombus, oldRhombusArrLength);
+    rhombus[oldRhombusArrLength - 1] = RandomRhombusInput();
+}
 
-void PrintRhombusArr(Rhombus[] array)
+void PrintRhombusArr(Rhombus[] array, ref int printRhombusArrLength)
 {
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 0; i < printRhombusArrLength; i++)
     {
-        //Console.WriteLine(array[i].Print());
-        Console.WriteLine($"$Coordinates of the Rhombus {i + 1}: {array[i].Print()}");
+        try
+        {
+            Console.WriteLine($"Coordinates of the Rhombus {i + 1}: {array[i].Print()}");
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+        }
     }
+    Console.WriteLine();
 }
 
 RhombusArrCr();
 
-//AddRhombus(ref rhombusArr, new Rhombus(1, 1, 2, 2, 3, 3, 4, 4));
+PrintRhombusArr(rhombusArr, ref rhombusArrLength);
 
-PrintRhombusArr(rhombusArr);
+Console.WriteLine(rhombusArrLength);
+
+AddRhombus(ref rhombusArr, ref rhombusArrLength);
+
+Console.WriteLine(rhombusArrLength);
+
+Console.WriteLine();
+
+PrintRhombusArr(rhombusArr, ref rhombusArrLength);
