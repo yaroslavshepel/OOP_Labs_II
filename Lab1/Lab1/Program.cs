@@ -4,42 +4,41 @@ public class Program : RhombusArrClass
 {
     public static void Main()
     {
+        int ChoiceCheck()
+        {
+            int choice = -1;
+            try { choice = ConsoleMenu.InputChoice(Convert.ToInt32(Console.ReadLine())); }
+            catch (Exception e) { Console.WriteLine(ConsoleMenu.WrongInputError() + "\n" + ConsoleMenu.PrintLongThing()); }
+            Console.WriteLine(ConsoleMenu.PrintLongThing());
+            return choice;
+        }
+        
         bool isStopped = true;
         while (isStopped)
         {
-            ConsoleMenu.FirstMenu();
-
-            var choice = 0;//Convert.ToInt32(Console.ReadLine());
-            try
-            { choice = Convert.ToInt32(Console.ReadLine()); }
-            catch (Exception e) { Console.WriteLine("This is not a number."); ConsoleMenu.PrintLongThing(); continue; }
+            Console.WriteLine(ConsoleMenu.FirstMenu());
+            int choice = ChoiceCheck();
             ConsoleMenu.PrintLongThing();
             bool SecondMenu()
             {
                 var isStopped2 = true;
                 while (isStopped2)
                 {
-                    ConsoleMenu.SecondMenuInterface();
-                    ConsoleMenu.PrintLongThing();
-                    var secondChoice = 0;
-                    try
-                    { secondChoice = Convert.ToInt32(Console.ReadLine()); }
-                    catch (Exception e) { Console.WriteLine("This is not a number."); ConsoleMenu.PrintLongThing(); continue; }
-                    
+                    Console.WriteLine(ConsoleMenu.SecondMenu());
+                    var secondChoice = ChoiceCheck();
                     switch (secondChoice)
                     {
                         case 1:
-                            RhombusArrClass.PrintRhombusArr (RhombusArrClass.RhombusArr, ref RhombusArrClass.RhombusArrLength);
-                            ConsoleMenu.PrintLongThing();
+                            for (var i = 0; i < RhombusArrClass.RhombusArrLength; i++) { Console.WriteLine(ConsoleMenu.ConsolePrintRhombus(i, RhombusArrClass.RhombusArr[i])); }
+                            Console.WriteLine(ConsoleMenu.PrintLongThing());
                             break;
                         case 2:
                             RhombusArrClass.AddRhombus(ref RhombusArrClass.RhombusArr, ref RhombusArrClass.RhombusArrLength);
-                            ConsoleMenu.PrintLongThing();
+                            Console.WriteLine(ConsoleMenu.PrintLongThing());
                             break;
                         case 3:
-                            ConsoleMenu.PerimeterToRemove("Ask");
-                            //ConsoleMenu.PrintLongThing();
-                            ConsoleMenu.PerimeterToRemove("Call");
+                            Console.WriteLine(ConsoleMenu.AskPerimeterToRemove());
+                            Console.WriteLine(ConsoleMenu.RemoveByPerimeter(Console.ReadLine()));
                             ConsoleMenu.PrintLongThing();
                             break;
                         case 4:
@@ -47,7 +46,10 @@ public class Program : RhombusArrClass
                             break;
                         case 0:
                             return isStopped = false;
+                            //isStopped = false;
+                            //break;
                         case 9:
+                            Console.WriteLine(ConsoleMenu.PrintLongThing());
                             isStopped2 = false;
                             break;
                     }

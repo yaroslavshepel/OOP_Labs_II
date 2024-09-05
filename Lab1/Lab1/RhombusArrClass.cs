@@ -92,7 +92,7 @@ public class RhombusArrClass
         rhombus[oldRhombusArrLength - 1] = RandomRhombusInput();
     }
 
-    public static void RemoveRhombusByPerimeter(ref RhombusClass[] rhombus, ref int oldRhombusArrLength, string perimeter)
+    public static string RemoveRhombusByPerimeter(ref RhombusClass[] rhombus, ref int oldRhombusArrLength, string perimeter)
     {
         var ifRhombusExists = false;
         for (var i = 0; i < oldRhombusArrLength; i++)
@@ -108,9 +108,15 @@ public class RhombusArrClass
                 Array.Resize(ref rhombus, oldRhombusArrLength);
             }
         }
-        if (!ifRhombusExists)
+
+        if (ifRhombusExists)
         {
-            ConsoleMenu.PerimeterToRemove("NoRhombusError");
+            //ConsoleMenu.RemoveByPerimeter("FOUND");
+            return "Done.";
+        }
+        else
+        {
+            return "Rhombus not found";
         }
     }
     
@@ -120,18 +126,18 @@ public class RhombusArrClass
         {
             if (rhombus[i].GetPerimeter().ToString() == perimeter)
             {
-                ConsoleMenu.ConsolePrintRhombus(i + 1, rhombus[i]);
+                Console.WriteLine(ConsoleMenu.ConsolePrintRhombus(i + 1, rhombus[i]));
             }
         }
     }
 
-    public static void PrintRhombusArr(RhombusClass[] array, ref int printRhombusArrLength)
+    public static string PrintRhombusArr(RhombusClass[] rhombus, ref int printRhombusArrLength)
     {
         for (int i = 0; i < printRhombusArrLength; i++)
         {
             try
             {
-                ConsoleMenu.ConsolePrintRhombus(i + 1, array[i]);
+               return ConsoleMenu.ConsolePrintRhombus(i + 1, rhombus[i]);
             }
             catch (Exception e)
             {
@@ -139,6 +145,7 @@ public class RhombusArrClass
             }
         }
         Console.WriteLine();
+        return "";
     }
 
     
