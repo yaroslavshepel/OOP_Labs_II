@@ -31,6 +31,8 @@ public class Program : RhombusArrClass
                             PrintRhombus();
                             break;
                         case 3:
+                            Console.Clear();
+                            PrintRhombus();
                             Console.WriteLine(ConsoleMenu.AskPerimeterToRemove());
                             Console.WriteLine(ConsoleMenu.RemoveByPerimeter(Console.ReadLine()));
                             PrintRhombus();
