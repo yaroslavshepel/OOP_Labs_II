@@ -2,14 +2,6 @@
 
 public class ConsoleMenu : RhombusArrClass
 {
-    /*public static void FirstMenu()
-    {
-        Console.WriteLine("Enter your choice: ");
-        Console.WriteLine("0. Exit.");
-        Console.WriteLine("1. Create an array of rhombuses on your own.");
-        Console.WriteLine("2. Create an array of rhombuses randomly.");
-    }*/
-
     public static string FirstMenu()
     {
         return "Enter your choice: \n" +
@@ -31,50 +23,9 @@ public class ConsoleMenu : RhombusArrClass
                "0. Exit.";
     }
 
-    public static string InputChoice(string choice)
-    {
-        if (choice == null) return WrongInputError();
-        else
-        {
-            return choice;
-        }
-        /*try
-        {
-            return choice;
-        }
-        catch (Exception e)
-        {
-            //Console.WriteLine(ConsoleMenu.WrongInputError());
-            return WrongInputError();
-        }*/
-        return "-1";
-    }
+    public static string RhombusPrint(int i, RhombusClass rhombus) { return $"Rhombus {i}: {rhombus.Print()}"; }
 
-    public static string PrintShit()
-    {
-        for (var i = 0; i < RhombusArrClass.RhombusArrLength; i++)
-        {
-            //return ConsoleMenu.ConsolePrintRhombus(i, RhombusArrClass.RhombusArr[i]);
-        }
-        return "";
-    }
-    
-    /*public static string RhombusPrint(int rhombusNumber, RhombusClass rhombus)
-    {
-        return $"Rhombus {rhombusNumber}: {rhombus.Print()}";
-    }*/
-    
-    public static string RhombusPrint(int i, RhombusClass rhombus)
-    {
-            return $"Rhombus {i}: {rhombus.Print()}";
-        
-        //return $"Rhombus {rhombusNumber}: {rhombus.Print()} Perimeter: {perimeter}";
-        return "";
-    }
-
-    public static void AskCoordinates(int rhombusNumber) { Console.WriteLine($"Enter the coordinates of the rhombus {rhombusNumber}: "); }
-    
-    //public static string ConsolePrintRhombus(int rhombusNumber, RhombusClass rhombus) { return $"Coordinates of the RhombusClass {rhombusNumber}: {rhombus.Print()}"; }
+    public static void AskCoordinates(int rhombusNumber) { Console.WriteLine($"Enter the coordinates (x \\n y) of the rhombus {rhombusNumber}: "); }
     
     public static string AskPerimeterToRemove() { return "Enter the perimeter of the rhombus: "; }
 

@@ -1,25 +1,27 @@
 ﻿namespace Lab1;
-//using Lab1;
 
 public class RhombusArrClass
 {
     protected static int RhombusArrLength = 7;
     protected static RhombusClass[] RhombusArr = new RhombusClass[RhombusArrLength];
     private static readonly Random Random = new Random();
-    private static RhombusClass RhombusToArr(double x1, double y1, double x2, double y2, double x3, double y3, double x4, double y4)
+    
+    private static RhombusClass RhombusToArr(double[] cords)
     {
-        var rhombusPerimeter = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
+        var rhombusPerimeter = 4*Math.Sqrt(Math.Pow(cords[2] - cords[0], 2) + Math.Pow(cords[3] - cords[1], 2));
         string displayString = rhombusPerimeter.ToString("0.00");
         displayString = displayString.Replace(",", ".");
-        var rhombusTemp = new RhombusClass(x1, y1, x2, y2, x3, y3, x4, y4, displayString);
+        var rhombusTemp = new RhombusClass(cords[0], cords[1], cords[2], cords[3], cords[4], cords[5], cords[6], cords[7], displayString);
         return rhombusTemp;
     }
 
     private static RhombusClass RhombusInput(int rhombusNumber)
     {
         ConsoleMenu.AskCoordinates(rhombusNumber);
-        double x1 = 0, y1 = 0, x2 = 0, y2 = 0, x3 = 0, y3 = 0, x4 = 0, y4 = 0;
-        for (int j = 0; j < 4; j++)
+
+        double[] cords = new double[8];
+        
+        for (var j = 0; j < 7; j++)
         {
             double x = 0, y = 0;
             try
@@ -27,38 +29,27 @@ public class RhombusArrClass
                 x = Convert.ToDouble(Console.ReadLine());
                 y = Convert.ToDouble(Console.ReadLine());
             }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-            }
-            switch (j)
-            {
-                case 0: x1 = x; y1 = y; break;
-                case 1: x2 = x; y2 = y; break;
-                case 2: x3 = x; y3 = y; break;
-                case 3: x4 = x; y4 = y; break;
-            }
+            catch (Exception e) { j -= 2; }
+            cords[j] = x;
+            cords[j + 1] = y;
+            j++;
         }
-        RhombusClass rhombusClassTemp = RhombusToArr( x1, y1, x2, y2, x3, y3, x4, y4);
+        RhombusClass rhombusClassTemp = RhombusToArr(cords);
         return rhombusClassTemp;
     }
 
     private static RhombusClass RandomRhombusInput()
     {
-        double x1 = 0, y1 = 0, x2 = 0, y2 = 0, x3 = 0, y3 = 0, x4 = 0, y4 = 0;
-        for (var j = 0; j < 4; j++)
+        double[] cords = new double[8];
+        for (var j = 0; j < 7; j++)
         {
-           double x = Random.Next(-100, 100);
-           double y = Random.Next(-100, 100);
-            switch (j)
-            {
-                case 0: x1 = x; y1 = y; break;
-                case 1: x2 = x; y2 = y; break;
-                case 2: x3 = x; y3 = y; break;
-                case 3: x4 = x; y4 = y; break;
-            }
+            double x = Random.Next(-100, 100);
+            double y = Random.Next(-100, 100);
+            cords[j] = x;
+            cords[j + 1] = y;
+            j++;
         }
-        RhombusClass rhombusClassTemp = RhombusToArr( x1, y1, x2, y2, x3, y3, x4, y4);
+        RhombusClass rhombusClassTemp = RhombusToArr(cords);
         return rhombusClassTemp;
     }
 
@@ -97,7 +88,6 @@ public class RhombusArrClass
         var ifRhombusExists = false;
         for (var i = 0; i < oldRhombusArrLength; i++)
         {
-            //if (rhombus[i].GetPerimeter().ToString() == perimeter)
             if (rhombus[i].GetPerimeter() == perimeter)
             {
                 ifRhombusExists = true;
@@ -113,34 +103,15 @@ public class RhombusArrClass
         else { return "Rhombus not found" + "\n" + "Choose perimeters of the these rhombuses:"; }
     }
     
-    public static string PerimeterFind(ref RhombusClass[] rhombus, ref int oldRhombusArrLength, string perimeter)
+    protected static string PerimeterFind(ref RhombusClass[] rhombus, ref int oldRhombusArrLength, string perimeter)
     {
-        for (int i = 0; i < oldRhombusArrLength; i++)
+        for (var i = 0; i < oldRhombusArrLength; i++)
         {
-            //if (rhombus[i].GetPerimeter().ToString() == perimeter)
             if (rhombus[i].GetPerimeter() == perimeter)
             {
-                //Console.WriteLine(ConsoleMenu.ConsolePrintRhombus(i + 1, rhombus[i]));
                 return ConsoleMenu.RhombusPrint(i + 1, rhombus[i]);
             }
         }
         return "Rhombus not found" + "\n" + "Try again.";
     }
-
-    /*public static string PrintRhombusArr(RhombusClass[] rhombus, ref int printRhombusArrLength)
-    {
-        for (int i = 0; i < printRhombusArrLength; i++)
-        {
-            try
-            {
-               return ConsoleMenu.ConsolePrintRhombus(i + 1, rhombus[i]);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-            }
-        }
-        Console.WriteLine();
-        return "";
-    }*/
 }
