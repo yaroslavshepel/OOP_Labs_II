@@ -19,16 +19,7 @@ public class ConsoleMenu : RhombusArrClass
     }
     
     public static string WrongInputError() { return "Wrong input."; }
-    /*public static void SecondMenu()
-    {
-        Console.WriteLine("Enter your choice: ");
-        Console.WriteLine("1. Print the array of rhombuses.");
-        Console.WriteLine("2. Add a rhombus to the array.");
-        Console.WriteLine("3. Remove a rhombus from the array by perimeter.");
-        Console.WriteLine("4. Find a rhombus by perimeter.");
-        Console.WriteLine("9. Return to the previous menu.");
-        Console.WriteLine("0. Exit.");
-    }*/
+
     public static string SecondMenu()
     {
         return "Enter your choice: \n" +
@@ -40,81 +31,58 @@ public class ConsoleMenu : RhombusArrClass
                "0. Exit.";
     }
 
-    public static int InputChoice(int choice)
+    public static string InputChoice(string choice)
     {
-        try
+        if (choice == null) return WrongInputError();
+        else
+        {
+            return choice;
+        }
+        /*try
         {
             return choice;
         }
         catch (Exception e)
         {
-            Console.WriteLine(ConsoleMenu.WrongInputError());
-        }
-        return -1;
+            //Console.WriteLine(ConsoleMenu.WrongInputError());
+            return WrongInputError();
+        }*/
+        return "-1";
     }
-    //!try
-    //!{ secondChoice = Convert.ToInt32(Console.ReadLine()); }
-    //!catch (Exception e) { Console.WriteLine(ConsoleMenu.WrongInputError()); ConsoleMenu.PrintLongThing(); continue; }
-    
-    public static void AskCoordinates(int rhombusNumber) { Console.WriteLine($"Enter the coordinates of the rhombus {rhombusNumber}: "); }
-    public static string ConsolePrintRhombus(int rhombusNumber, RhombusClass rhombus) { return $"Coordinates of the RhombusClass {rhombusNumber}: {rhombus.Print()}"; }
-    
-    public static string AskPerimeterToRemove() { return "Enter the perimeter of the rhombus: "; }
-    
-    /*public static string PerimeterToRemove(string choice)
+
+    public static string PrintShit()
     {
-        switch (choice)
+        for (var i = 0; i < RhombusArrClass.RhombusArrLength; i++)
         {
-            case "Ask":
-                //Console.WriteLine("Enter the perimeter of the rhombus you want to remove: ");
-                return "Enter the perimeter of the rhombus you want to remove: ";
-                break;
-            case "Call":
-                //var perimeter = Console.ReadLine();
-                //if (perimeter == null) { Console.WriteLine("You have not entered the perimeter."); break; }
-                //if (perimeter == null) { return "You have not entered the perimeter."; }
-                //RhombusArrClass.RemoveRhombusByPerimeter(ref RhombusArrClass.RhombusArr, ref RhombusArrClass.RhombusArrLength, perimeter);
-                break;
-            case "NoRhombusError":
-                //Console.WriteLine("There is no rhombus with such perimeter.");
-                return "There is no rhombus with such perimeter.";
-                break;
+            //return ConsoleMenu.ConsolePrintRhombus(i, RhombusArrClass.RhombusArr[i]);
         }
         return "";
+    }
+    
+    /*public static string RhombusPrint(int rhombusNumber, RhombusClass rhombus)
+    {
+        return $"Rhombus {rhombusNumber}: {rhombus.Print()}";
     }*/
     
+    public static string RhombusPrint(int i, RhombusClass rhombus)
+    {
+            return $"Rhombus {i}: {rhombus.Print()}";
+        
+        //return $"Rhombus {rhombusNumber}: {rhombus.Print()} Perimeter: {perimeter}";
+        return "";
+    }
+
+    public static void AskCoordinates(int rhombusNumber) { Console.WriteLine($"Enter the coordinates of the rhombus {rhombusNumber}: "); }
+    
+    //public static string ConsolePrintRhombus(int rhombusNumber, RhombusClass rhombus) { return $"Coordinates of the RhombusClass {rhombusNumber}: {rhombus.Print()}"; }
+    
+    public static string AskPerimeterToRemove() { return "Enter the perimeter of the rhombus: "; }
+
     public static string RemoveByPerimeter(string data)
     {
-        
-       /* if (data == "NOT FOUND") { return "Rhombus not found"; }
-        if (data == null) { return "You have not entered the perimeter."; }
-        if (data == "FOUND")
-        {
-            return "Done.";
-        }*/
+        Console.Clear();
         return RhombusArrClass.RemoveRhombusByPerimeter(ref RhombusArrClass.RhombusArr, ref RhombusArrClass.RhombusArrLength, data);
-        //return "";
-        //RhombusArrClass.RemoveRhombusByPerimeter(ref RhombusArrClass.RhombusArr, ref RhombusArrClass.RhombusArrLength, perimeter);
-        //return "Done.";
-        /*switch (choice)
-        {
-            case "Ask":
-                //Console.WriteLine("Enter the perimeter of the rhombus you want to remove: ");
-                return "Enter the perimeter of the rhombus you want to remove: ";
-                break;
-            case "Call":
-                //var perimeter = Console.ReadLine();
-                //if (perimeter == null) { Console.WriteLine("You have not entered the perimeter."); break; }
-                if (perimeter == null) { return "You have not entered the perimeter."; }
-                RhombusArrClass.RemoveRhombusByPerimeter(ref RhombusArrClass.RhombusArr, ref RhombusArrClass.RhombusArrLength, perimeter);
-                break;
-            case "NoRhombusError":
-                //Console.WriteLine("There is no rhombus with such perimeter.");
-                return "There is no rhombus with such perimeter.";
-                break;
-        }*/
-        //return "";
     }
-    public static void PerimeterToFind() { Console.WriteLine("Enter the perimeter of the rhombus you want to find: "); }
+    public static string PerimeterToFind() { return "Enter the perimeter of the rhombus you want to find: "; }
     public static string PrintLongThing() { return "------------------------------------------------------------"; }
 }

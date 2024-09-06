@@ -4,10 +4,20 @@ public class Program : RhombusArrClass
 {
     public static void Main()
     {
+        void PrintRhombus()
+        {
+            Console.WriteLine(ConsoleMenu.PrintLongThing());
+            for (var i = 0; i < RhombusArrClass.RhombusArrLength; i++)
+            {
+                Console.WriteLine(ConsoleMenu.RhombusPrint(i, RhombusArr[i]));
+            }
+            Console.WriteLine(ConsoleMenu.PrintLongThing());
+        }
+        
         int ChoiceCheck()
         {
             int choice = -1;
-            try { choice = ConsoleMenu.InputChoice(Convert.ToInt32(Console.ReadLine())); }
+            try { choice = Convert.ToInt32(ConsoleMenu.InputChoice(Console.ReadLine())); }
             catch (Exception e) { Console.WriteLine(ConsoleMenu.WrongInputError() + "\n" + ConsoleMenu.PrintLongThing()); }
             Console.WriteLine(ConsoleMenu.PrintLongThing());
             return choice;
@@ -29,27 +39,38 @@ public class Program : RhombusArrClass
                     switch (secondChoice)
                     {
                         case 1:
-                            for (var i = 0; i < RhombusArrClass.RhombusArrLength; i++) { Console.WriteLine(ConsoleMenu.ConsolePrintRhombus(i, RhombusArrClass.RhombusArr[i])); }
-                            Console.WriteLine(ConsoleMenu.PrintLongThing());
+                            Console.Clear();
+                            //Console.WriteLine(ConsoleMenu.PrintLongThing());
+                            //for (var i = 0; i < RhombusArrClass.RhombusArrLength; i++) { Console.WriteLine(ConsoleMenu.PrintRhombus(i, RhombusArrClass.RhombusArr[i])); }
+                            PrintRhombus();
+                            //Console.WriteLine(ConsoleMenu.PrintLongThing());
                             break;
                         case 2:
+                            Console.Clear();
                             RhombusArrClass.AddRhombus(ref RhombusArrClass.RhombusArr, ref RhombusArrClass.RhombusArrLength);
-                            Console.WriteLine(ConsoleMenu.PrintLongThing());
+                            PrintRhombus();
+                            //Console.WriteLine(ConsoleMenu.PrintLongThing());
                             break;
                         case 3:
                             Console.WriteLine(ConsoleMenu.AskPerimeterToRemove());
                             Console.WriteLine(ConsoleMenu.RemoveByPerimeter(Console.ReadLine()));
-                            ConsoleMenu.PrintLongThing();
+                            //Console.Clear();
+                            //ConsoleMenu.PrintLongThing();
+                            PrintRhombus();
+                            //Console.WriteLine(ConsoleMenu.PrintLongThing());
                             break;
                         case 4:
-                            ConsoleMenu.PerimeterToFind();
+                            Console.Clear();
+                            PrintRhombus();
+                            Console.WriteLine(ConsoleMenu.PerimeterToFind());
+                            Console.WriteLine(ConsoleMenu.PerimeterFind(ref RhombusArrClass.RhombusArr, ref RhombusArrClass.RhombusArrLength, Console.ReadLine()));
+                            Console.WriteLine(ConsoleMenu.PrintLongThing());
                             break;
                         case 0:
                             return isStopped = false;
-                            //isStopped = false;
-                            //break;
                         case 9:
                             Console.WriteLine(ConsoleMenu.PrintLongThing());
+                            Console.Clear();
                             isStopped2 = false;
                             break;
                     }
@@ -60,11 +81,13 @@ public class Program : RhombusArrClass
             {
                 case 1:
                     RhombusArrClass.RhombusArrCr(choice);
+                    Console.Clear();
                     SecondMenu();
                     ConsoleMenu.PrintLongThing();
                     break;
                 case 2:
                     RhombusArrClass.RhombusArrCr(choice);
+                    Console.Clear();
                     SecondMenu();
                     ConsoleMenu.PrintLongThing();
                     break;
