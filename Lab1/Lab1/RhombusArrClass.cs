@@ -5,19 +5,6 @@ public class RhombusArrClass
     protected static int RhombusArrLength = 7;
     protected static RhombusClass[] RhombusArr = new RhombusClass[RhombusArrLength];
     private static readonly Random Random = new Random();
-    
-    private static RhombusClass RhombusToArr(double[] cords)
-    {
-        var rhombusPerimeter = 4*Math.Sqrt(Math.Pow(cords[2] - cords[0], 2) + Math.Pow(cords[3] - cords[1], 2));
-        var rhombusSquare = 0.5* (Math.Sqrt(Math.Pow(cords[4] - cords[0], 2) + Math.Pow(cords[5] - cords[1], 2)) *
-                                  Math.Sqrt(Math.Pow(cords[6] - cords[2], 2) + Math.Pow(cords[7] - cords[3], 2)));
-        string perimeter = rhombusPerimeter.ToString("0.00");
-        string square = rhombusSquare.ToString("0.00");
-        perimeter = perimeter.Replace(",", ".");
-        square = square.Replace(",", ".");
-        var rhombusTemp = new RhombusClass(cords[0], cords[1], cords[2], cords[3], cords[4], cords[5], cords[6], cords[7], perimeter, square);
-        return rhombusTemp;
-    }
 
     private static RhombusClass RhombusInput(int rhombusNumber)
     {
@@ -33,12 +20,12 @@ public class RhombusArrClass
                 x = Convert.ToDouble(Console.ReadLine());
                 y = Convert.ToDouble(Console.ReadLine());
             }
-            catch (Exception e) { j -= 2; }
+            catch (Exception) { j -= 2; }
             cords[j] = x;
             cords[j + 1] = y;
             j++;
         }
-        RhombusClass rhombusClassTemp = RhombusToArr(cords);
+        var rhombusClassTemp = new RhombusClass(cords[0], cords[1], cords[2], cords[3], cords[4], cords[5], cords[6], cords[7]);
         return rhombusClassTemp;
     }
 
@@ -53,7 +40,7 @@ public class RhombusArrClass
             cords[j + 1] = y;
             j++;
         }
-        RhombusClass rhombusClassTemp = RhombusToArr(cords);
+        var rhombusClassTemp = new RhombusClass(cords[0], cords[1], cords[2], cords[3], cords[4], cords[5], cords[6], cords[7]);
         return rhombusClassTemp;
     }
 
