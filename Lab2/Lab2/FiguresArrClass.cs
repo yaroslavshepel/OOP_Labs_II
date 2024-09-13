@@ -4,11 +4,10 @@ public class FiguresArrClass
 {
     
     private static readonly Random Random = new();
-    protected static int NumberOfFigures = 5;
-    protected static TrapezoidClass[] TrapezoidArr = new TrapezoidClass[NumberOfFigures];
-    protected static CircleClass[] CircleArr = new CircleClass[NumberOfFigures];
+    protected static readonly int NumberOfFigures = 5;
+    protected static readonly FigureClass[][] FiguresArr = new FigureClass[2][];
     
-    public static void UserChoice(string choice)
+    protected static void UserChoice(string choice)
     {
         switch (choice)
         {
@@ -21,20 +20,33 @@ public class FiguresArrClass
         }
     }
     
-    public static void FiguresArrClassCreation(string choice)
+    protected static void FiguresArrClassCreation(string choice)
     {
-        for (int i = 0; i < NumberOfFigures; i++)
+        try
+        {
+            FiguresArr[0] = new TrapezoidClass[NumberOfFigures]; 
+            FiguresArr[1] = new CircleClass[NumberOfFigures];
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
+        for (var i = 0; i < NumberOfFigures; i++)
         {
             try
             {
                 if (choice == "Trapezoid")
                 {
-                    TrapezoidArr[i] = RandomTrapezoidInput();
+                    //TrapezoidArr[i] = RandomTrapezoidInput();
+                    FiguresArr[0][i] = RandomTrapezoidInput();
                 }
                 else
                 {
-                    CircleArr[i] = RandomCircleInput();
+                    // CircleArr[i] = RandomCircleInput();
+                    FiguresArr[1][i] = RandomCircleInput();
                 }
+                
             }
             catch (Exception e)
             {

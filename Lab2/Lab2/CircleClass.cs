@@ -2,13 +2,12 @@
 
 public class CircleClass : FigureClass
 {
-    private double _radius;
+    private readonly double _radius;
     
     public CircleClass(double radius)
     {
         _radius = radius;
-        // Console.WriteLine("Circle constructor called");
-        ConsoleMenu.PrintSomething("Circle constructor called");
+        Console.WriteLine("Circle constructor called");
     }
 
     public override string Print()
@@ -18,24 +17,45 @@ public class CircleClass : FigureClass
 
     public override string GetArea()
     {
-        var circleArea = Math.PI * Math.Pow(_radius, 2);
-        string area = circleArea.ToString("0.00");
-        area = area.Replace(",", ".");
-        return area;
+        try
+        {
+            var circleArea = Math.PI * Math.Pow(_radius, 2);
+            string area = circleArea.ToString("0.00");
+            area = area.Replace(",", ".");
+            return area;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 
     public override string GetPerimeter()
     {
-        var circlePerimeter = 2 * Math.PI * _radius;
-        string perimeter = circlePerimeter.ToString("0.00");
-        perimeter = perimeter.Replace(",", ".");
-        return perimeter;
+        try
+        {
+            var circlePerimeter = 2 * Math.PI * _radius;
+            string perimeter = circlePerimeter.ToString("0.00");
+            perimeter = perimeter.Replace(",", ".");
+            return perimeter;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
     
-    /*public override string Display()
+    public override string GetInfo()
     {
-        return "Circle: Area and Perimeter are calculated.";
-    }*/
+        return base.GetInfo() + $" It is a circle";
+    }
+    
+    public new string GetDetails()
+    {
+        return "Circle details.";
+    }
 
     ~CircleClass()
     {
