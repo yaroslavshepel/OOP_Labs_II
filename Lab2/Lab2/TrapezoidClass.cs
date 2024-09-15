@@ -30,15 +30,28 @@ public class TrapezoidClass : FigureClass
             var BC = Math.Sqrt(Math.Abs(Math.Pow(_coordinates[0][2] - _coordinates[0][1], 2) + Math.Pow(_coordinates[1][2] - _coordinates[1][1], 2)));
             var BA = Math.Sqrt(Math.Abs(Math.Pow(_coordinates[0][1] - _coordinates[0][0], 2) + Math.Pow(_coordinates[1][1] - _coordinates[1][0], 2)));
             var CD = Math.Sqrt(Math.Abs(Math.Pow(_coordinates[0][3] - _coordinates[0][2], 2) + Math.Pow(_coordinates[1][3] - _coordinates[1][2], 2)));
-            return (0.5 * (BC + AD) * Math.Sqrt(Math.Abs(Math.Pow(BA, 2) - 
+            double Area = (0.5 * (BC + AD) * Math.Sqrt(Math.Abs(Math.Pow(BA, 2) - 
                                                          Math.Pow((Math.Pow((AD - BC), 2) + Math.Pow(BA, 2) - 
-                                                                   Math.Pow(CD, 2)) / (2 * (AD - BC)), 2)))).ToString("0.00").Replace(",", ".");
+                                                                   Math.Pow(CD, 2)) / (2 * (AD - BC)), 2))));
+
+            if (Area < 1)
+            {
+                throw new CustomException("Area is less than 1");
+            }
+            
+            return Area.ToString();
         }
+        catch (CustomException e)
+        {
+            Console.WriteLine(e);
+        }
+        
         catch (Exception e)
         {
             Console.WriteLine(e);
-            throw;
         }
+
+        return "0";
     }
 
     public override string GetPerimeter()

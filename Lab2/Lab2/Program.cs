@@ -146,15 +146,7 @@ public class Program : FiguresArrClass
             }
 
             CircleClass circleAs;
-            try
-            {
-                circleAs = figure as CircleClass;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
+            circleAs = figure as CircleClass;
             
             if (circleAs != null)
             {

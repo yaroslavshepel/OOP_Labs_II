@@ -1,6 +1,6 @@
 ﻿namespace Lab2;
 
-public class FigureClass
+public abstract class FigureClass
 {
     public virtual string GetArea()
     {
@@ -11,11 +11,8 @@ public class FigureClass
     {
         return "Figure: area and perimeter are calculated.";
     }
-    
-    public virtual string GetPerimeter()
-    {
-        return "0";
-    }
+
+    public abstract string GetPerimeter();
     
     public virtual string GetInfo()
     {

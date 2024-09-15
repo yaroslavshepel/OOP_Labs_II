@@ -1,6 +1,6 @@
 ﻿namespace Lab2;
 
-public class ConsoleMenu : FigureClass
+public static class ConsoleMenu
 {
     public static string PrintLongThing() { return "------------------------------------------------------------"; }
     
