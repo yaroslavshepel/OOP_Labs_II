@@ -4,6 +4,8 @@ public class CircleClass : FigureClass
 {
     private readonly double _radius;
     
+    public CircleClass() {}
+    
     public CircleClass(double radius)
     {
         _radius = radius;
@@ -20,7 +22,7 @@ public class CircleClass : FigureClass
         try
         {
             var circleArea = Math.PI * Math.Pow(_radius, 2);
-            string area = circleArea.ToString("0.00");
+            var area = circleArea.ToString("0.00");
             area = area.Replace(",", ".");
             return area;
         }

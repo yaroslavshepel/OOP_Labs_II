@@ -2,6 +2,8 @@
 
 public static class ConsoleMenu
 {
+    static ConsoleMenu(){}
+    
     public static string PrintLongThing() { return "------------------------------------------------------------"; }
     
     public static string FirstMenu() { 

@@ -2,6 +2,9 @@
 
 public class FiguresArrClass
 {
+    public FiguresArrClass(){}
+    
+    public FiguresArrClass(string choice) { UserChoice(choice); }
     
     private static readonly Random Random = new();
     protected static readonly int NumberOfFigures = 5;

@@ -74,9 +74,6 @@ public class Program : FiguresArrClass
                     Console.Clear();
                     TypeOfIsAs();
                     break;
-                case 5:
-                    //CustomException();
-                    break;
                 case 0:
                     return;
             }
