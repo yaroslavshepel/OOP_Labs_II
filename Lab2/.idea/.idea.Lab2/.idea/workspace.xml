@@ -9,18 +9,8 @@
   <component name="ChangeListManager">
     <list default="true" id="146ac8d0-bf0d-43bf-ba73-ef68f21cefc7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Lab2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/TrapezoidClass.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab2/TrapezoidClass.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/bin/Debug/net8.0/Lab2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Lab2/bin/Debug/net8.0/Lab2.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/bin/Debug/net8.0/Lab2.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Lab2/bin/Debug/net8.0/Lab2.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/bin/Debug/net8.0/Lab2.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Lab2/bin/Debug/net8.0/Lab2.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab2/obj/Debug/net8.0/Lab2.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab2/obj/Debug/net8.0/Lab2.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab2/obj/Debug/net8.0/Lab2.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Lab2/obj/Debug/net8.0/Lab2.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/obj/Debug/net8.0/Lab2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Lab2/obj/Debug/net8.0/Lab2.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/obj/Debug/net8.0/Lab2.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Lab2/obj/Debug/net8.0/Lab2.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/obj/Debug/net8.0/Lab2.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/Lab2/obj/Debug/net8.0/Lab2.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Lab2/obj/Debug/net8.0/apphost.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/obj/Debug/net8.0/ref/Lab2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Lab2/obj/Debug/net8.0/ref/Lab2.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/obj/Debug/net8.0/refint/Lab2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Lab2/obj/Debug/net8.0/refint/Lab2.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,21 +34,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Project.Lab2.executor": "Run",
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Project.Lab2.executor&quot;: &quot;Run&quot;,
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Lab2" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -95,6 +85,7 @@
       <workItem from="1726289845119" duration="2141000" />
       <workItem from="1726851426400" duration="1028000" />
       <workItem from="1726894930294" duration="2422000" />
+      <workItem from="1726926695171" duration="1854000" />
     </task>
     <servers />
   </component>
