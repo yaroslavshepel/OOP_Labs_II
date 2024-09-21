@@ -8,23 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="146ac8d0-bf0d-43bf-ba73-ef68f21cefc7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Lab1/Lab1/obj/Debug/net8.0/Lab1.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab1/Lab1/obj/Debug/net8.0/Lab1.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab1/Lab1/obj/Debug/net8.0/Lab1.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab1/Lab1/obj/Debug/net8.0/Lab1.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab1/Lab1/obj/Debug/net8.0/Lab1.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab1/Lab1/obj/Debug/net8.0/Lab1.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab1/Lab1/obj/Debug/net8.0/Lab1.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab1/Lab1/obj/Debug/net8.0/Lab1.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab1/Lab1/obj/Lab1.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab1/Lab1/obj/Lab1.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab1/Lab1/obj/Lab1.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab1/Lab1/obj/Lab1.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab1/Lab1/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab1/Lab1/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab1/Lab1/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab1/Lab1/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab1/Lab1/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab1/Lab1/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab1/Lab1/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab1/Lab1/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab1/Lab1/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab1/Lab1/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Lab2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/CircleClass.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab2/CircleClass.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/ConsoleMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab2/ConsoleMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/FigureClass.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab2/FigureClass.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/FiguresArrClass.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab2/FiguresArrClass.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab2/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab2/TrapezoidClass.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab2/TrapezoidClass.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab2/bin/Debug/net8.0/Lab2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Lab2/bin/Debug/net8.0/Lab2.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab2/bin/Debug/net8.0/Lab2.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Lab2/bin/Debug/net8.0/Lab2.exe" afterDir="false" />
@@ -60,21 +44,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Project.Lab2.executor&quot;: &quot;Debug&quot;,
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Project.Lab2.executor": "Run",
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Lab2" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -109,7 +93,8 @@
       <workItem from="1726252734055" duration="735000" />
       <workItem from="1726253608062" duration="6453000" />
       <workItem from="1726289845119" duration="2141000" />
-      <workItem from="1726851426400" duration="957000" />
+      <workItem from="1726851426400" duration="1028000" />
+      <workItem from="1726894930294" duration="2422000" />
     </task>
     <servers />
   </component>

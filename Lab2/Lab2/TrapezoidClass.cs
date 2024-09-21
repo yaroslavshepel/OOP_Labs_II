@@ -6,7 +6,7 @@ public class TrapezoidClass : FigureClass
     
     public TrapezoidClass() {}
     
-    public TrapezoidClass(double[][] coordinates)
+    public TrapezoidClass(double[][] coordinates) : base("Trapezoid")
     {
         _coordinates = coordinates;
         Console.WriteLine("Trapezoid constructor called");
