@@ -1,0 +1,113 @@
+{
+  "NumberOfStudents": 12,
+  "Students": [
+    {
+      "FirstName": "Taras",
+      "LastName": "Shevchenko",
+      "Course": 3,
+      "StudentID": "ST001",
+      "GenderType": "Male",
+      "AverageGrade": 4.5,
+      "IdentificationCode": "ID001"
+    },
+    {
+      "FirstName": "Ivan",
+      "LastName": "Ivanenko",
+      "Course": 2,
+      "StudentID": "ST002",
+      "GenderType": "Male",
+      "AverageGrade": 3.8,
+      "IdentificationCode": "ID002"
+    },
+    {
+      "FirstName": "Oksana",
+      "LastName": "Kovalenko",
+      "Course": 4,
+      "StudentID": "ST003",
+      "GenderType": "Male",
+      "AverageGrade": 4.9,
+      "IdentificationCode": "ID003"
+    },
+    {
+      "FirstName": "Petro",
+      "LastName": "Petrenko",
+      "Course": 1,
+      "StudentID": "ST004",
+      "GenderType": "Male",
+      "AverageGrade": 3.5,
+      "IdentificationCode": "ID004"
+    },
+    {
+      "FirstName": "Natalia",
+      "LastName": "Tkachenko",
+      "Course": 2,
+      "StudentID": "ST005",
+      "GenderType": "Male",
+      "AverageGrade": 4,
+      "IdentificationCode": "ID005"
+    },
+    {
+      "FirstName": "Oleksii",
+      "LastName": "Bondarenko",
+      "Course": 3,
+      "StudentID": "ST006",
+      "GenderType": "Male",
+      "AverageGrade": 4.2,
+      "IdentificationCode": "ID006"
+    },
+    {
+      "FirstName": "Anna",
+      "LastName": "Lysenko",
+      "Course": 1,
+      "StudentID": "ST007",
+      "GenderType": "Male",
+      "AverageGrade": 3.7,
+      "IdentificationCode": "ID007"
+    },
+    {
+      "FirstName": "Andrii",
+      "LastName": "Dmytrenko",
+      "Course": 4,
+      "StudentID": "ST008",
+      "GenderType": "Male",
+      "AverageGrade": 4.8,
+      "IdentificationCode": "ID008"
+    },
+    {
+      "FirstName": "Maria",
+      "LastName": "Horodetska",
+      "Course": 3,
+      "StudentID": "ST009",
+      "GenderType": "Male",
+      "AverageGrade": 4.6,
+      "IdentificationCode": "ID009"
+    },
+    {
+      "FirstName": "Mykola",
+      "LastName": "Kryvonos",
+      "Course": 2,
+      "StudentID": "ST010",
+      "GenderType": "Male",
+      "AverageGrade": 3.9,
+      "IdentificationCode": "ID010"
+    },
+    {
+      "FirstName": "1",
+      "LastName": "1",
+      "Course": 1,
+      "StudentID": "1",
+      "GenderType": "Female",
+      "AverageGrade": 1,
+      "IdentificationCode": "1"
+    },
+    {
+      "FirstName": "9",
+      "LastName": "9",
+      "Course": 9,
+      "StudentID": "9",
+      "GenderType": "Male",
+      "AverageGrade": 9,
+      "IdentificationCode": "9"
+    }
+  ]
+}

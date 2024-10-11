@@ -1,36 +1,36 @@
-﻿namespace Lab3;
+﻿using System.Text.Json.Serialization;
+namespace Lab3;
 
-//[AttributeFirstName("Unknown")]
-[AttributeFirstName]
-[AttributeLastName("Unknown")]
 public class Student
 {
-    private string _surname;
-    private string _name;
-    private int _course;
-    private string _studentId;
-    private enum _sex { male, female }
-    private double _averageMark;
-    private int _idNumber;
-    
-    Student()
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    public int Course { get; set; }
+    public string StudentID { get; set; }
+    public enum Gender { 
+        Male = 0, 
+        Female = 1
+    }
+    [JsonConverter(typeof(JsonStringEnumConverter))]
+    public Gender GenderType { get; set; }
+    public double AverageGrade { get; set; }
+    public string IdentificationCode { get; set; }
+    public Student(){}
+
+    public Student(string firstName, string lastName, int course, string studentID, string genderType,
+    double averageGrade, string identificationCode)
     {
-        _surname = "Unknown";
-        _name = "Unknown";
-        _course = 0;
-        _studentId = "Unknown";
-        _averageMark = 0;
-        _idNumber = 0;
-    } // default constructor
+        FirstName = firstName;
+        LastName = lastName;
+        Course = course;
+        StudentID = studentID;
+        GenderType = (Gender)Enum.Parse(typeof(Gender), genderType);
+        AverageGrade = averageGrade;
+        IdentificationCode = identificationCode;
+    }
     
-    Student(string surname, string name, int course, string studentId, double averageMark, int idNumber)
+    public string DisplayStudent(Student student)
     {
-        _surname = surname;
-       // _name = name;
-        _name = name;
-        _course = course;
-        _studentId = studentId;
-        _averageMark = averageMark;
-        _idNumber = idNumber;
+        return $"First name: {student.FirstName} Last name: {student.LastName} Course: {student.Course} Student ID: {student.StudentID} Gender: {student.GenderType} Average grade: {student.AverageGrade} ID code: {student.IdentificationCode}";
     }
 }

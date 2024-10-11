@@ -8,9 +8,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="146ac8d0-bf0d-43bf-ba73-ef68f21cefc7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Lab3/Lab3/ConsoleMenu.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab3/Lab3/CustomException.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab3/Lab3/Functions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab3/Lab3/StudentArr.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab3/Lab3/StudentData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab3/Lab3/bin/Debug/net8.0/Dish.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab3/Lab3/bin/Debug/net8.0/Students.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Lab2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab2/obj/Debug/net8.0/Lab2.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab2/obj/Debug/net8.0/Lab2.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab2/obj/Debug/net8.0/Lab2.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Lab2/obj/Debug/net8.0/Lab2.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab2/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Lab2/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/Lab3/AttributeFirstName.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/Lab3/AttributeLastName.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/Lab3/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/Lab3/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/Lab3/Storyteller.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/Lab3/Student.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/Lab3/Student.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/Lab3/bin/Debug/net8.0/Lab3.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/Lab3/bin/Debug/net8.0/Lab3.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/Lab3/bin/Debug/net8.0/Lab3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/Lab3/bin/Debug/net8.0/Lab3.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/Lab3/bin/Debug/net8.0/Lab3.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/Lab3/bin/Debug/net8.0/Lab3.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/Lab3/obj/Debug/net8.0/Lab3.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/Lab3/obj/Debug/net8.0/Lab3.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/Lab3/obj/Debug/net8.0/Lab3.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/Lab3/obj/Debug/net8.0/Lab3.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/Lab3/obj/Debug/net8.0/Lab3.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/Lab3/obj/Debug/net8.0/Lab3.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/Lab3/obj/Debug/net8.0/Lab3.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/Lab3/obj/Debug/net8.0/Lab3.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/Lab3/obj/Debug/net8.0/Lab3.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/Lab3/obj/Debug/net8.0/Lab3.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/Lab3/obj/Debug/net8.0/Lab3.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/Lab3/obj/Debug/net8.0/Lab3.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/Lab3/obj/Debug/net8.0/Lab3.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/Lab3/obj/Debug/net8.0/Lab3.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/Lab3/obj/Debug/net8.0/Lab3.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/Lab3/obj/Debug/net8.0/Lab3.genruntimeconfig.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/Lab3/obj/Debug/net8.0/Lab3.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/Lab3/obj/Debug/net8.0/Lab3.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/Lab3/obj/Debug/net8.0/Lab3.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/Lab3/obj/Debug/net8.0/Lab3.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/Lab3/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/Lab3/obj/Debug/net8.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/Lab3/obj/Debug/net8.0/ref/Lab3.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/Lab3/obj/Debug/net8.0/ref/Lab3.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/Lab3/obj/Debug/net8.0/refint/Lab3.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/Lab3/obj/Debug/net8.0/refint/Lab3.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/Lab3/obj/Lab3.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/Lab3/obj/Lab3.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/Lab3/obj/Lab3.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/Lab3/obj/Lab3.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/Lab3/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/Lab3/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/Lab3/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/Lab3/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/Lab3/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/Lab3/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/Lab3/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/Lab3/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab3/Lab3/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab3/Lab3/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +122,10 @@
       <workItem from="1726851426400" duration="1028000" />
       <workItem from="1726894930294" duration="2422000" />
       <workItem from="1726926695171" duration="1854000" />
+      <workItem from="1728244115858" duration="2479000" />
+      <workItem from="1728310974517" duration="1633000" />
+      <workItem from="1728321515160" duration="1253000" />
+      <workItem from="1728587348042" duration="837000" />
     </task>
     <servers />
   </component>
