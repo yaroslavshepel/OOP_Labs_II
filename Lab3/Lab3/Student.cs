@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+using System.Text.RegularExpressions;
 namespace Lab3;
 
 public class Student
@@ -27,6 +28,18 @@ public class Student
         GenderType = (Gender)Enum.Parse(typeof(Gender), genderType);
         AverageGrade = averageGrade;
         IdentificationCode = identificationCode;
+    }
+    
+    public static bool ValidateStudentID(string studentId)
+    {
+        string pattern = @"^ST\d{3}$";
+        return Regex.IsMatch(studentId, pattern);
+    }
+    
+    public static bool ValidateIdentificationCode(string identificationCode)
+    {
+        string pattern = @"^ID\d{3}$";
+        return Regex.IsMatch(identificationCode, pattern);
     }
     
     public string DisplayStudent(Student student)

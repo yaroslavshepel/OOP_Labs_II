@@ -2,10 +2,7 @@
 
 public class CustomException : Exception
 {
-    public CustomException()
-    {
-        throw new Exception("Custom exception");
-    }
+    public CustomException() { }
     
     public CustomException(string message) : base(message) { }
     

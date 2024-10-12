@@ -1,9 +1,9 @@
 ﻿using System.Text.Json;
 namespace Lab3;
 
-public interface IFunctions
+public static class Functions
 {
-    static async Task ReadData(int num)
+    public static async Task ReadData(int num)
     {
         var options = new JsonSerializerOptions { WriteIndented = true };
         await using (FileStream fs = new FileStream("Students.json", FileMode.Open))
@@ -28,7 +28,7 @@ public interface IFunctions
         }
     }
     
-    static string InputCheck(string typeOfInput)
+    public static string InputCheck(string typeOfInput)
     {
         decimal amount;
         switch (typeOfInput)
@@ -64,7 +64,7 @@ public interface IFunctions
         return "";
     }
 
-    static async Task RemoveStudentFromFile()
+    public static async Task RemoveStudentFromFile()
     {
         Console.WriteLine("Enter the StudentID of the student you want to remove:");
         string Id = Console.ReadLine();
@@ -94,7 +94,7 @@ public interface IFunctions
         await SaveStudentsToFile();
     }
     
-    static async Task AddNewStudentToFile()
+    public static async Task AddNewStudentToFile()
     {
         var options = new JsonSerializerOptions { WriteIndented = true };
 
@@ -124,8 +124,8 @@ public interface IFunctions
             { Console.WriteLine("Course must be between 1 and 5. Please enter a valid course:"); }
             else { break; }
         }
-        Console.WriteLine("Enter student ID:");
-        string studentId = Console.ReadLine();
+        Console.WriteLine("Enter student ID in format \"ST***\":");
+        string studentId = ValidateInput(Console.ReadLine(), "StudentID");      
         Console.WriteLine($"Enter the gender of the new student (choose from Male = 0,Female = 1):");
         int studentGender;
         while (true)
@@ -144,8 +144,8 @@ public interface IFunctions
             { Console.WriteLine("Average grade must be between 0 and 5. Please enter a valid average grade:"); }
             else { break; }
         }
-        Console.WriteLine("Enter the identification code of the student:");
-        string identificationCode = Console.ReadLine();
+        Console.WriteLine("Enter the identification code of the student in format \"ID***\":");
+        string identificationCode = ValidateInput(Console.ReadLine(), "IdentificationCode");
 
         var newStudentt = new Student(firstName, lastName, course, studentId, Convert.ToString(studentGender), averageGrade, identificationCode);
 
@@ -165,8 +165,46 @@ public interface IFunctions
             Console.WriteLine("New student has been added and data has been saved to file");
         }
     }
-
-    static async Task DoTask()
+    
+    public static string ValidateInput(string input, string type)
+    {
+        switch (type)
+        {
+            case "StudentID":
+                while (true)
+                {
+                    if (Student.ValidateStudentID(input) == false)
+                    {
+                        Console.WriteLine("Invalid student ID. Please enter a valid student ID in format \"ST***\":");
+                        input = Console.ReadLine();
+                    }
+                    else
+                    {
+                        return input;
+                        break;
+                    }
+                }
+                break;
+            case "IdentificationCode":
+                while (true)
+                {
+                    if (Student.ValidateIdentificationCode(input) == false)
+                    {
+                        Console.WriteLine("Invalid identification code. Please enter a valid identification code in format \"ID***\":");
+                        input = Console.ReadLine();
+                    }
+                    else
+                    {
+                        return input;
+                        break;
+                    }
+                }
+                break;
+        }
+        return "";
+    }
+    
+    public static async Task DoTask()
     {
         bool someoneFound = false;
         foreach (var student in StudentArr._StudentsArr)
@@ -183,7 +221,7 @@ public interface IFunctions
         }
     }
     
-    static async Task SaveStudentsToFile()
+    public static async Task SaveStudentsToFile()
     {
         var options = new JsonSerializerOptions
         {
@@ -203,7 +241,7 @@ public interface IFunctions
         }
     }
     
-    static async Task DoSomethingWithEntities()
+    public static async Task DoSomethingWithEntities()
     {
         Random rnd = new Random();
         var randomStudent = StudentArr._StudentsArr[rnd.Next(0, StudentArr._StudentsArr.Length)];
