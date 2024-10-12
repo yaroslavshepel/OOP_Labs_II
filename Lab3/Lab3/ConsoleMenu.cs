@@ -19,20 +19,4 @@ public static class ConsoleMenu
               "0. Exit\n" +
               "Enter your choice: ";
     }
-
-    public static int ChoiceCheck()
-    {
-        var choice = -1;
-        try { choice = Convert.ToInt32(Console.ReadLine()); }
-        catch (FormatException)
-        {
-            throw new CustomException("Invalid input format. Please enter a number.");
-        }
-        catch (Exception ex)
-        {
-            throw new CustomException("An unexpected error occurred.", ex);
-        }
-        Console.WriteLine(ConsoleMenu.PrintLongThing());
-        return choice;
-    }
 }
