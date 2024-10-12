@@ -7,9 +7,7 @@ class Program : StudentArr
     {
         var options = new JsonSerializerOptions { WriteIndented = true };
         await Functions.ReadData(0);
-        decimal amount = 0;
-        var isStopped = true;
-        while (isStopped)
+        while (true)
         {
             Console.WriteLine(ConsoleMenu.Menu());
             var choice = Convert.ToInt32(Functions.InputCheck("Menu"));

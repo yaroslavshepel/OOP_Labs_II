@@ -18,7 +18,7 @@ public static class Functions
             }
             if (num == 1)
             {
-                Console.WriteLine($"Number of dishes: {loadedData.NumberOfStudents}");
+                Console.WriteLine($"Number of Students: {loadedData.NumberOfStudents}");
                 foreach (var student in loadedData.Students)
                 {
                         
@@ -30,7 +30,6 @@ public static class Functions
     
     public static string InputCheck(string typeOfInput)
     {
-        decimal amount;
         switch (typeOfInput)
         {
             case "Menu":
