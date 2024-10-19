@@ -42,7 +42,7 @@ public class NonGenericCollection
         }
         return -1;
     }
-    
+
     public static void PrintProducts()
     {
         foreach (Product product in productsArray)
