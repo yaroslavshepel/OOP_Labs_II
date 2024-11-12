@@ -20,21 +20,6 @@ public static class Functions
                 Console.WriteLine(ConsoleMenu.PrintLongThing());
                 return Convert.ToString(choice); 
                 break;
-            /*case "InputString":
-                string input = Console.ReadLine();
-                while (true)
-                {
-                    if (input == "")
-                    {
-                        Console.WriteLine("Wrong input. Please enter a valid data.");
-                        input = Console.ReadLine(); 
-                    }
-                    else
-                    {
-                        return input;
-                        break;
-                    }
-                }*/
             case "InputString":
                 string input;
                 while (true)
@@ -220,7 +205,7 @@ public static class Functions
                     Console.Clear();
                     Console.WriteLine("Enter the name of the product you want to find:");
                     var productNameForFind = InputCheck("InputString");
-                    GenericCollection.FindProduct(productNameForFind);
+                    Console.WriteLine(GenericCollection.FindProduct(productNameForFind, 1));
                     break;
                 case 5:
                     Console.Clear();
@@ -246,7 +231,7 @@ public static class Functions
     {
         while (true)
         {
-            Console.WriteLine(ConsoleMenu.MenuOfNonGenetic());
+            Console.WriteLine(ConsoleMenu.MenuOfGenetic());
             var choice = Convert.ToInt32(Functions.InputCheck("Menu"));
 
             Console.Clear();
@@ -261,11 +246,11 @@ public static class Functions
                     Console.WriteLine("Enter the code of the product:");
                     var code = Convert.ToInt32(InputCheck("InputInt"));
                     Console.WriteLine("Enter the production month of the product:");
-                    int pM;
+                    int pM = 0;
                     while (true)
                     {
                         pM = Convert.ToInt32(Console.ReadLine());
-                        if (!(pM > 12 && pM < 1))
+                        if (pM < 1 || pM > 12)
                         { Console.WriteLine("Mouth must be from 1 to 12. Please enter the valid mouth"); }
                         else { break; }
                     }
@@ -274,22 +259,29 @@ public static class Functions
                     while (true)
                     {
                         pD = Convert.ToInt32(Console.ReadLine());
-                        if (!(pD > 31 && pD < 1))
-                        { Console.WriteLine("Day must be from 1 to 31. Please enter the valid day"); }
-                        else if (pM == 1 || pM == 3 || pM == 5 || pM == 7 || pM == 8 || pM == 10 || pM == 12)
-                        { if (pD > 31) { Console.WriteLine("Day must be from 1 to 31. Please enter the valid day"); } }
-                        else if (pM == 4 || pM == 6 || pM == 9 || pM == 11)
-                        { if (pD > 30) { Console.WriteLine("Day must be from 1 to 30. Please enter the valid day"); } }
-                        else if (pM == 2)
-                        { if (pD > 28) { Console.WriteLine("Day must be from 1 to 28. Please enter the valid day"); } } 
-                        else { break; }
+                        if (pD < 1 || pD > 31)
+                        {
+                            Console.WriteLine("Day must be from 1 to 31. Please enter a valid day.");
+                        }
+                        else if ((pM == 4 || pM == 6 || pM == 9 || pM == 11) && pD > 30)
+                        {
+                            Console.WriteLine("Day must be from 1 to 30 for the selected month. Please enter a valid day.");
+                        }
+                        else if (pM == 2 && pD > 28)
+                        {
+                            Console.WriteLine("Day must be from 1 to 28 for February. Please enter a valid day.");
+                        }
+                        else
+                        {
+                            break;
+                        }
                     }
                     Console.WriteLine("Enter the expiration mouth of the product:");
                     int eM;
                     while (true)
                     {
                         eM = Convert.ToInt32(Console.ReadLine());
-                        if (!(eM > 12 && eM < 1))
+                        if (eM < 1 || eM > 12)
                         { Console.WriteLine("Mouth must be from 1 to 12. Please enter the valid mouth"); }
                         else { break; }
                     }
@@ -298,15 +290,22 @@ public static class Functions
                     while (true)
                     {
                         eD = Convert.ToInt32(Console.ReadLine());
-                        if (!(eD > 31 && eD < 1))
-                        { Console.WriteLine("Day must be from 1 to 31. Please enter the valid day"); }
-                        else if (eM == 1 || eM == 3 || eM == 5 || eM == 7 || eM == 8 || eM == 10 || eM == 12)
-                        { if (eD > 31) { Console.WriteLine("Day must be from 1 to 31. Please enter the valid day"); } }
-                        else if (eM == 4 || eM == 6 || eM == 9 || eM == 11)
-                        { if (eD > 30) { Console.WriteLine("Day must be from 1 to 30. Please enter the valid day"); } }
-                        else if (eM == 2)
-                        { if (eD > 28) { Console.WriteLine("Day must be from 1 to 28. Please enter the valid day"); } } 
-                        else { break; }
+                        if (eD < 1 || eD > 31)
+                        {
+                            Console.WriteLine("Day must be from 1 to 31. Please enter a valid day.");
+                        }
+                        else if ((eD == 4 || eD == 6 || eD == 9 || eD == 11) && eM > 30)
+                        {
+                            Console.WriteLine("Day must be from 1 to 30 for the selected month. Please enter a valid day.");
+                        }
+                        else if (eM == 2 && eM > 28)
+                        {
+                            Console.WriteLine("Day must be from 1 to 28 for February. Please enter a valid day.");
+                        }
+                        else
+                        {
+                            break;
+                        }
                     }
                     NonGenericCollection.AddProduct(name, code, new DateTime(2024, pM, pD), new DateTime(2024, eM, eD));
                     break;
@@ -331,7 +330,7 @@ public static class Functions
                     while (true)
                     {
                         newPm = Convert.ToInt32(Console.ReadLine());
-                        if (!(newPm > 12 && newPm < 1))
+                        if ((newPm < 1 || newPm > 12))
                         { Console.WriteLine("Mouth must be from 1 to 12. Please enter the valid mouth"); }
                         else { break; }
                     }
@@ -340,7 +339,7 @@ public static class Functions
                     while (true)
                     {
                         newPd = Convert.ToInt32(Console.ReadLine());
-                        if (!(newPd > 31 && newPd < 1))
+                        if ((newPd < 1 || newPd > 31))
                         { Console.WriteLine("Day must be from 1 to 31. Please enter the valid day"); }
                         else if (newPm == 1 || newPm == 3 || newPm == 5 || newPm == 7 || newPm == 8 || newPm == 10 || newPm == 12)
                         { if (newPd > 31) { Console.WriteLine("Day must be from 1 to 31. Please enter the valid day"); } }
@@ -355,7 +354,7 @@ public static class Functions
                     while (true)
                     {
                         newEm = Convert.ToInt32(Console.ReadLine());
-                        if (!(newEm > 12 && newEm < 1))
+                        if (!(newEm < 1 || newEm > 12))
                         { Console.WriteLine("Mouth must be from 1 to 12. Please enter the valid mouth"); }
                         else { break; }
                     }
@@ -364,7 +363,7 @@ public static class Functions
                     while (true)
                     {
                         newEd = Convert.ToInt32(Console.ReadLine());
-                        if (!(newEd > 31 && newEd < 1))
+                        if ((newEd < 1 || newEd > 31))
                         { Console.WriteLine("Day must be from 1 to 31. Please enter the valid day"); }
                         else if (newEm == 1 || newEm == 3 || newEm == 5 || newEm == 7 || newEm == 8 || newEm == 10 || newEm == 12)
                         { if (newEd > 31) { Console.WriteLine("Day must be from 1 to 31. Please enter the valid day"); } }
@@ -380,7 +379,7 @@ public static class Functions
                     Console.Clear();
                     Console.WriteLine("Enter the name of the product you want to find:");
                     var productNameForFind = InputCheck("InputString");
-                    NonGenericCollection.FindProduct(productNameForFind);
+                    Console.WriteLine(NonGenericCollection.FindProduct(productNameForFind));
                     break;
                 case 5:
                     Console.Clear();
@@ -401,11 +400,12 @@ public static class Functions
             }
         }
     }
+    
     public static void WorkWithArray()
     {
         while (true)
         {
-            Console.WriteLine(ConsoleMenu.MenuOfNonGenetic());
+            Console.WriteLine(ConsoleMenu.MenuOfGenetic());
             var choice = Convert.ToInt32(Functions.InputCheck("Menu"));
 
             Console.Clear();
@@ -420,11 +420,11 @@ public static class Functions
                     Console.WriteLine("Enter the code of the product:");
                     var code = Convert.ToInt32(InputCheck("InputInt"));
                     Console.WriteLine("Enter the production month of the product:");
-                    int pM;
+                    int pM = 0;
                     while (true)
                     {
                         pM = Convert.ToInt32(Console.ReadLine());
-                        if (!(pM > 12 && pM < 1))
+                        if (pM < 1 || pM > 12)
                         { Console.WriteLine("Mouth must be from 1 to 12. Please enter the valid mouth"); }
                         else { break; }
                     }
@@ -433,22 +433,29 @@ public static class Functions
                     while (true)
                     {
                         pD = Convert.ToInt32(Console.ReadLine());
-                        if (!(pD > 31 && pD < 1))
-                        { Console.WriteLine("Day must be from 1 to 31. Please enter the valid day"); }
-                        else if (pM == 1 || pM == 3 || pM == 5 || pM == 7 || pM == 8 || pM == 10 || pM == 12)
-                        { if (pD > 31) { Console.WriteLine("Day must be from 1 to 31. Please enter the valid day"); } }
-                        else if (pM == 4 || pM == 6 || pM == 9 || pM == 11)
-                        { if (pD > 30) { Console.WriteLine("Day must be from 1 to 30. Please enter the valid day"); } }
-                        else if (pM == 2)
-                        { if (pD > 28) { Console.WriteLine("Day must be from 1 to 28. Please enter the valid day"); } } 
-                        else { break; }
+                        if (pD < 1 || pD > 31)
+                        {
+                            Console.WriteLine("Day must be from 1 to 31. Please enter a valid day.");
+                        }
+                        else if ((pM == 4 || pM == 6 || pM == 9 || pM == 11) && pD > 30)
+                        {
+                            Console.WriteLine("Day must be from 1 to 30 for the selected month. Please enter a valid day.");
+                        }
+                        else if (pM == 2 && pD > 28)
+                        {
+                            Console.WriteLine("Day must be from 1 to 28 for February. Please enter a valid day.");
+                        }
+                        else
+                        {
+                            break;
+                        }
                     }
                     Console.WriteLine("Enter the expiration mouth of the product:");
                     int eM;
                     while (true)
                     {
                         eM = Convert.ToInt32(Console.ReadLine());
-                        if (!(eM > 12 && eM < 1))
+                        if (eM < 1 || eM > 12)
                         { Console.WriteLine("Mouth must be from 1 to 12. Please enter the valid mouth"); }
                         else { break; }
                     }
@@ -457,15 +464,22 @@ public static class Functions
                     while (true)
                     {
                         eD = Convert.ToInt32(Console.ReadLine());
-                        if (!(eD > 31 && eD < 1))
-                        { Console.WriteLine("Day must be from 1 to 31. Please enter the valid day"); }
-                        else if (eM == 1 || eM == 3 || eM == 5 || eM == 7 || eM == 8 || eM == 10 || eM == 12)
-                        { if (eD > 31) { Console.WriteLine("Day must be from 1 to 31. Please enter the valid day"); } }
-                        else if (eM == 4 || eM == 6 || eM == 9 || eM == 11)
-                        { if (eD > 30) { Console.WriteLine("Day must be from 1 to 30. Please enter the valid day"); } }
-                        else if (eM == 2)
-                        { if (eD > 28) { Console.WriteLine("Day must be from 1 to 28. Please enter the valid day"); } } 
-                        else { break; }
+                        if (eD < 1 || eD > 31)
+                        {
+                            Console.WriteLine("Day must be from 1 to 31. Please enter a valid day.");
+                        }
+                        else if ((eD == 4 || eD == 6 || eD == 9 || eD == 11) && eM > 30)
+                        {
+                            Console.WriteLine("Day must be from 1 to 30 for the selected month. Please enter a valid day.");
+                        }
+                        else if (eM == 2 && eM > 28)
+                        {
+                            Console.WriteLine("Day must be from 1 to 28 for February. Please enter a valid day.");
+                        }
+                        else
+                        {
+                            break;
+                        }
                     }
                     Array.AddProduct(name, code, new DateTime(2024, pM, pD), new DateTime(2024, eM, eD));
                     break;
@@ -490,7 +504,7 @@ public static class Functions
                     while (true)
                     {
                         newPm = Convert.ToInt32(Console.ReadLine());
-                        if (!(newPm > 12 && newPm < 1))
+                        if ((newPm < 1 || newPm > 12))
                         { Console.WriteLine("Mouth must be from 1 to 12. Please enter the valid mouth"); }
                         else { break; }
                     }
@@ -499,7 +513,7 @@ public static class Functions
                     while (true)
                     {
                         newPd = Convert.ToInt32(Console.ReadLine());
-                        if (!(newPd > 31 && newPd < 1))
+                        if ((newPd < 1 || newPd > 31))
                         { Console.WriteLine("Day must be from 1 to 31. Please enter the valid day"); }
                         else if (newPm == 1 || newPm == 3 || newPm == 5 || newPm == 7 || newPm == 8 || newPm == 10 || newPm == 12)
                         { if (newPd > 31) { Console.WriteLine("Day must be from 1 to 31. Please enter the valid day"); } }
@@ -514,7 +528,7 @@ public static class Functions
                     while (true)
                     {
                         newEm = Convert.ToInt32(Console.ReadLine());
-                        if (!(newEm > 12 && newEm < 1))
+                        if (!(newEm < 1 || newEm > 12))
                         { Console.WriteLine("Mouth must be from 1 to 12. Please enter the valid mouth"); }
                         else { break; }
                     }
@@ -523,7 +537,7 @@ public static class Functions
                     while (true)
                     {
                         newEd = Convert.ToInt32(Console.ReadLine());
-                        if (!(newEd > 31 && newEd < 1))
+                        if ((newEd < 1 || newEd > 31))
                         { Console.WriteLine("Day must be from 1 to 31. Please enter the valid day"); }
                         else if (newEm == 1 || newEm == 3 || newEm == 5 || newEm == 7 || newEm == 8 || newEm == 10 || newEm == 12)
                         { if (newEd > 31) { Console.WriteLine("Day must be from 1 to 31. Please enter the valid day"); } }
@@ -539,7 +553,7 @@ public static class Functions
                     Console.Clear();
                     Console.WriteLine("Enter the name of the product you want to find:");
                     var productNameForFind = InputCheck("InputString");
-                    Array.FindProduct(productNameForFind);
+                    Console.WriteLine(Array.FindProduct(productNameForFind, 1));
                     break;
                 case 5:
                     Console.Clear();

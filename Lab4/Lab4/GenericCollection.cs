@@ -29,25 +29,37 @@ public class GenericCollection
     }
     public static void UpdateProduct(string name, Product newProduct)
     {
-        int index = FindProduct(name);
+        int index = FindProduct(name, 0);
         if (index >= 0)
         {
             productsArray[index] = newProduct;
         }
     }
 
-    public static int FindProduct(string name)
+    public static int FindProduct(string name, int operation)
     {
         for (int i = 0; i < count; i++)
         {
             if (productsArray[i].GetName() == name)
             {
-                return i;
+                switch (operation)
+                {
+                    case 1:
+                        return i;
+                    case 2:
+                        PrintProduct(i);
+                        break;
+                }
             }
         }
         return -1;
     }
-
+    
+    public static string PrintProduct(int index)
+    {
+        return productsArray[index].PrintInfo();
+    }
+    
     public static void PrintProducts()
     {
         for (int i = 0; i < count; i++)
